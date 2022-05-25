@@ -1,35 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&:wght@500&display=swap');
+
 .HomeBody {
     height: 100vh;
-	background-image: linear-gradient(315deg, #22d197 0%, #c4f5c2 74%);
+	background-image: linear-gradient(315deg, #030c2f 0%, #071758 74%);
 }
 
 .Header
 {
-    width: 100%;
+    width: 100hv;
     height: 5rem;
-    background-color: rgb(196, 255, 196);
+    background-image: linear-gradient(140deg, #030c2f 0%, #071758 74%);
 }
+
 
 .System
 {
+    font-family: 'Orbitron', sans-serif;
     position: relative;
     top: 1.25rem;
     font-size: 30px;
-    font-family:fantasy;
-    color: rgb(0, 0, 0);
+    color: rgb(38, 0, 255);
+    
 }
 
 .LogoutButton
 {
-    position: relative;
-    left: 96rem;
-    top: 1.25rem;
-    font-size: 20px;
+    position: fixed;
+    right: 2rem;
+    top: 1.2rem;
+    font-size: 22px;
     background-color: rgb(253, 110, 110);
+    border-radius: 10px;
 }
 
 .LogoutButton:hover
 {
     background-color: rgb(255, 0, 0);
     cursor: pointer;
+    
 }
+
+
+.Raise
+{
+    position: fixed;
+    top : 10rem;
+    left: 25rem
+}
+
+.RaiseLessons
+{
+    position: fixed;
+    top : 10rem;
+    left: 50rem
+}
+
+.RaiseRollCall
+{
+    position: fixed;
+    top : 10rem;
+    left: 75rem
+}
+

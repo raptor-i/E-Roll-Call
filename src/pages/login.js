@@ -13,7 +13,7 @@ const Login = () =>
 
     const Logining = () => 
     {
-        if(Username !== "ily" && Password !== "123")
+        if(Username !== "admin" && Password !== "123")
         {
             console.log(Username + " " + Password);
             setInvalid(<h4 className="InvalidText">Invalid username or password!</h4>);
