@@ -1,19 +1,21 @@
 import React, { useState } from "react";
+import LessonList from "./layouts/lessonlist";
+import Lesson from "../data/lessons";
 import "./mainlessons.css";
 
 
 
-const data = [
-    {name : "Test"}
-]
+let Data = Lesson();
 const MainLessons = () =>
 {
     
     return (
         <div className="MainLesson">
             <div className="BackgroundLesson">
-            <h1>test</h1>
-                
+                <div className="Lessons-Column">
+                    <h6>Active Lessons</h6>
+                    <LessonList items={Data} ></LessonList>
+                </div>
             </div>
         </div>
     )

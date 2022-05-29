@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Students from "../../data/students"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./studentlist.css"
 
 
-const StudentList = (props) =>
+const LessonList = (props) =>
 {
     const ShowInfo = () =>
     {
@@ -16,18 +15,19 @@ const StudentList = (props) =>
     return (
         
         <div>
-            <h5>{props.items.Name} {props.items.Surname} {props.items.BirthDate}</h5>
+            <h5>{props.items.Code} {props.items.Name}</h5>
             <div className="list-group-con">
                 {
                     props.items.map(x => 
                         
                         <ul class="list-group" >
-                            <li class="list-group-item action" variant="primary" onClick={ShowInfo}> {x.No} {x.Name} {x.Surname} </li>
+                            <li class="list-group-item action" variant="primary" onClick={ShowInfo}> {x.Code} {x.Name}</li>
                         </ul>)
                 }
             </div>
+            <h1>test</h1>
         </div>
     )
 };
 
-export default StudentList;
+export default LessonList;

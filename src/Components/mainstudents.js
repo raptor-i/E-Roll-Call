@@ -10,11 +10,13 @@ import StudentList from "./layouts/studentslis";
 let StudentData = Students();
 const MainStudents = () =>
 {
-
     return (
         <div className="Main">
             <div className="Background">
-            <StudentList items={StudentData}></StudentList>
+                <div className="Student-List">
+                    <h6 className="CurrentlyStudentHeader">Currently Enrolled Students</h6>
+                    <StudentList  items={StudentData}></StudentList>
+                </div>
             </div>
         </div>
     )

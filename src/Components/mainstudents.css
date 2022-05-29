@@ -19,6 +19,14 @@
     border-color: rgb(255, 0, 221);
 }
 
-.student-list{
-    max-height: 300px;
+.Student-List
+{
+    position: relative;
+    left: 0px;
+    max-height: 100px;
+}
+
+.CurrentlyStudentHeader
+{
+    color: rgb(0, 0, 0);
 }

@@ -1,9 +1,9 @@
-
 .MainLesson
 {
     position: fixed;
     left:27rem;
     top: 20rem;
+    
 }
 
 .BackgroundLesson
@@ -16,5 +16,13 @@
     border-radius: 2%;
 }:hover{
     border-color: rgb(255, 0, 221);
+}
+
+.Lessons-Column
+{
+    column-gap: 20px;
+    column-width: 500px;
+    column-rule: 9px double #ff00ff;
+
 }
 
