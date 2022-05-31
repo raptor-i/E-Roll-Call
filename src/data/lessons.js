@@ -24,6 +24,26 @@ const LessonList = [
         Name : "Bilgisayar Ağları",
         Teacher : "Deniz Taşkın"
     },
+    {
+        Code : "Bil152",
+        Name : "Bilgisayar Ağları",
+        Teacher : "Deniz Taşkın"
+    },
+    {
+        Code : "Bil152",
+        Name : "Bilgisayar Ağları",
+        Teacher : "Deniz Taşkın"
+    },
+    {
+        Code : "Bil152",
+        Name : "Bilgisayar Ağları",
+        Teacher : "Deniz Taşkın"
+    },
+    {
+        Code : "Bil152",
+        Name : "Bilgisayar Ağları",
+        Teacher : "Deniz Taşkın"
+    },
 ]
 
 const Lesson = () =>

@@ -7,7 +7,12 @@ const LessonList = (props) =>
 {
     const ShowInfo = () =>
     {
-        alert("you have clicked");
+        setValue(
+            <div className="Detailed-inform">
+                <label>Lesson Code</label>
+                <h1>test</h1>
+            </div>
+        );
     }
 
 
@@ -15,17 +20,17 @@ const LessonList = (props) =>
     return (
         
         <div>
-            <h5>{props.items.Code} {props.items.Name}</h5>
             <div className="list-group-con">
                 {
                     props.items.map(x => 
-                        
                         <ul class="list-group" >
                             <li class="list-group-item action" variant="primary" onClick={ShowInfo}> {x.Code} {x.Name}</li>
                         </ul>)
                 }
+                
             </div>
-            <h1>test</h1>
+            {value}
+             
         </div>
     )
 };

@@ -13,22 +13,22 @@ const Home = () =>
 {
     const [Window, setWindow] = useState(null);
     const navigate = useNavigate();
-
+    
     const StudentsClick = () =>
     {
-        setWindow(MainStudents())
+        setWindow(<MainStudents/>)
         console.log("You clicked Student");
     }
 
     const LessonsClick = () =>
     {
-        setWindow(MainLessons());
+        setWindow(<MainLessons/>);
         console.log("You clicked Lessons");
     }
 
     const RollCallClick = () =>
     {
-        setWindow(RollCall());
+        setWindow(<RollCall/>);
         console.log("You clicked Roll call");
     }
 

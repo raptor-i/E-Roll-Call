@@ -85,7 +85,7 @@
 {   
     position: relative;
     top : 10rem;
-    right: 6rem;
+    right: 5.5rem;
     font-size: 20px;
     border: 2px groove;
     border-color: #062c7e;
@@ -99,7 +99,7 @@
 {
 	position: relative;
 	top: 35%;
-	left: 27%;
+	left: 16%;
 	color: red;
 }
 

@@ -12,3 +12,11 @@
 {
     cursor: pointer;
 }
+
+.Detailed-inform
+{
+    position: relative;
+    left: 10rem;
+    bottom: 20rem;
+    font-size: 100px;
+}
