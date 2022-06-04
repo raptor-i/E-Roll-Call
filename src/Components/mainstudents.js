@@ -21,15 +21,15 @@ const MainStudents = () =>
             return;
         }
         
-       let result = data.find(x => x.Name === e.target.value);
-       console.log(result);
+        let result = data.filter(x => x.No == e.target.value);
 
-       //setData(result);
+        if(result.length > 0 )
+            setData(result);
     }
     return (
         <div className="Main">
             <div className="Background">
-                <input className="Search-Box" type="text" placeholder="Search" onChange={Searching}></input>
+                <input className="Search-Box" type="text" placeholder="Search By No" onChange={Searching}></input>
                 <h6 className="CurrentlyStudentHeader">Currently Enrolled Students</h6>
                 <div className="Student-List">
                     <StudentList items={data}></StudentList>
