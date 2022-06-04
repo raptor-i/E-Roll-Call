@@ -12,26 +12,23 @@ const MainLessons = () =>
 
     const Searching = (e) =>
     {
-        if(e.target.value === "")
-        {
-            setData(Data);
-            return;
-        }
-        
+
         let result = Data.filter(x =>  x.Code.toUpperCase() == e.target.value.toUpperCase());
         if(result.length > 0 )
+        {
             setData(result);
+            return;
+        }
+        setData(Data);    
     }
     
     return (
         <div className="MainLesson">
             <div className="BackgroundLesson">
-                <div className="Lessons-Column">
-                    <input className="Search-Box" type="text" placeholder="Search By Code" onChange={Searching}></input>
+                    <input className="Search-Box-Lesson" type="text" placeholder="Search By Code" onChange={Searching}></input>
                     <h6 className="Active-Lessons">Active Lessons</h6>
                     <div className="Lessons-List">
                        <LessonList items={data} ></LessonList> 
-                    </div>
                 </div>
             </div>
         </div>

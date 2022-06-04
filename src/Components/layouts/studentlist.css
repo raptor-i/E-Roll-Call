@@ -1,5 +1,3 @@
-
-
 .StudentListBox 
 {
     max-height: 50px;
@@ -13,4 +11,18 @@
 }.list-group-con:hover
 {
     cursor: pointer;
+}
+
+.Detailed-Student
+{
+    position: relative;
+    left: 20rem;
+    bottom: 4rem;
+}
+
+.pp{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
 }

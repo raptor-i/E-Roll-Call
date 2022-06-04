@@ -15,16 +15,17 @@ const MainStudents = () =>
 
     const Searching = (e) =>
     {
-        if(e.target.value === "")
+
+        let result = data.filter(x => x.No == e.target.value);
+        console.log(result);
+        if(result.length > 0 )
         {
-            setData(StudentData);
+            setData(result);
             return;
         }
+            
         
-        let result = data.filter(x => x.No == e.target.value);
-
-        if(result.length > 0 )
-            setData(result);
+        setData(StudentData);
     }
     return (
         <div className="Main">

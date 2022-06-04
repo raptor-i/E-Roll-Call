@@ -1,5 +1,4 @@
 
-
 .Main
 {
     position: fixed;
@@ -12,7 +11,7 @@
     height: 600px;
     width: 1000px;
     background-color: rgb(72, 0, 241);
-    border: 5px solid;
+    border: 3px solid;
     border-color: rgb(255, 0, 179);
     border-radius: 2%;
 }:hover{
@@ -35,7 +34,8 @@
 
 .Search-Box
 {
-    margin: 3px;
+    margin: 5px;
+    border-radius: 10px;
 }
 
 .Lessons-List

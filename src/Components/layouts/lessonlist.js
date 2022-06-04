@@ -5,18 +5,21 @@ import "./studentlist.css"
 
 const LessonList = (props) =>
 {
-    const ShowInfo = () =>
+    const ShowInfo = (e) =>
     {
-        setValue(
-            <div className="Detailed-inform">
-                <label>Lesson Code</label>
-                <h1>test</h1>
+        console.log(e.target.id);
+        
+        let SelectedLesson = props.items.filter(x => x.Code == e.target.id);
+
+        setDetail(
+            <div className="Detailed-Lesson">
+                <h1>Lesson Information</h1>
             </div>
         );
     }
 
 
-    const [value, setValue] = useState(null);
+    const [detail, setDetail] = useState(null);
     return (
         
         <div>
@@ -24,13 +27,12 @@ const LessonList = (props) =>
                 {
                     props.items.map(x => 
                         <ul class="list-group" >
-                            <li class="list-group-item action" variant="primary" onClick={ShowInfo}> {x.Code} {x.Name}</li>
+                            <li id={x.Code} class="list-group-item action" variant="primary" onClick={ShowInfo}> {x.Code} {x.Name}</li>
                         </ul>)
                 }
                 
             </div>
-            {value}
-             
+            {detail}
         </div>
     )
 };
