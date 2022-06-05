@@ -3,18 +3,30 @@
     max-height: 50px;
 }
 
-.list-group-con
+.list-group-lesson
 {
 
     position: absolute;
     max-height: 1px;
-}.list-group-con:hover
+}.list-group-lesson:hover
 {
     cursor: pointer;
 }
 
 .Detailed-Lesson
 {
-    background-color: red;
-    margin: 50px;
+    position: relative;
+    left: 20rem;
+    bottom: 4rem;
+    width: 350px;
 }
+.Alt-info
+{
+    margin-top: 3rem;
+
+}
+.list-group{
+    position: relative;
+    bottom: 3rem;
+}
+

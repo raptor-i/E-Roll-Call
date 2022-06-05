@@ -21,7 +21,7 @@ const StudentData = [
         Img : "https://cdn.internationalstudent.com/images/international-student/asian-college-student-400x400.jpg"
     },
     {
-        No : 312,
+        No : 100,
         Name : "Yusuf",
         Surname : "Demir",
         BirthDate : "12.07.1998",

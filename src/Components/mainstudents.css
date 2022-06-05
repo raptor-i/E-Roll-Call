@@ -47,3 +47,15 @@
 {
     margin: 3px;
 }
+
+.person-add
+{
+    position: absolute;
+    right: 4rem;
+    margin: 5px;
+    background-color: rgb(243, 161, 224);
+    border: 3px solid;
+    border-color: rgb(97, 60, 94);
+    border-radius: 100%;
+
+}   

@@ -5,7 +5,7 @@
 
 .list-group-con
 {
-
+    
     position: absolute;
     max-height: 1px;
 }.list-group-con:hover
@@ -13,11 +13,19 @@
     cursor: pointer;
 }
 
+.info-click
+{
+    position: relative;
+    left: 21rem;
+    top: 10rem;
+}
+
 .Detailed-Student
 {
     position: relative;
     left: 20rem;
     bottom: 4rem;
+    width: 380px;
 }
 
 .pp{
@@ -25,4 +33,15 @@
     width: 200px;
     height: 200px;
     border-radius: 25%;
+}
+
+.edit-student
+{
+    position: relative;
+    left: 59rem;
+    bottom: 3.7rem;
+    background-color: rgb(243, 161, 224);
+    border: 3px solid;
+    border-color: rgb(97, 60, 94);
+    border-radius: 100%;
 }
