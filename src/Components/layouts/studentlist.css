@@ -38,10 +38,16 @@
 .edit-student
 {
     position: relative;
-    left: 59rem;
+    left: 58.5rem;
     bottom: 3.7rem;
     background-color: rgb(243, 161, 224);
     border: 3px solid;
     border-color: rgb(97, 60, 94);
     border-radius: 100%;
+}
+
+#edit-student
+{
+    font-size: 30px;
+    margin-top : 5px;
 }

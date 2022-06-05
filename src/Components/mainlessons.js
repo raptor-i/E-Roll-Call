@@ -7,9 +7,13 @@ import Icons from "../style/icons";
 let Data = Lesson();
 const MainLessons = () => {
   const [data, setData] = useState(Data);
+  
+
 
   const Add_Lesson = () => {
-    //
+
+    
+      
   };
 
   const Searching = (e) => {
@@ -25,6 +29,7 @@ const MainLessons = () => {
 
   return (
     <div className="MainLesson">
+      
       <Icons />
       <div className="BackgroundLesson">
         <input
@@ -34,7 +39,7 @@ const MainLessons = () => {
           onChange={Searching}
         ></input>
         <button className="lesson-add" onClick={Add_Lesson}>
-          <span class="material-symbols-rounded">add_circle</span>
+          <span id="add-circle" class="material-symbols-rounded">add_circle</span>
         </button>
         <h6 className="Active-Lessons">Active Lessons</h6>
         <div className="Lessons-List">

@@ -42,7 +42,7 @@ const StudentList = (props) => {
     <div>
       <Icons />
       <button className="edit-student" onClick={Edit_Student}>
-        <span class="material-symbols-outlined">edit_note</span>
+        <span id="edit-student" class="material-symbols-outlined">edit_note</span>
       </button>
       <h1 className="Detailed-Student">Student Information</h1>
       <div className="list-group-con">

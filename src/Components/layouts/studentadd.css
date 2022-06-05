@@ -1,0 +1,12 @@
+
+.backgorund-add-student
+{
+    height: 700px;
+    width: 1000px;
+    background-color: rgb(72, 0, 241);
+    border: 3px solid;
+    border-color: rgb(255, 0, 179);
+    border-radius: 2%;
+}:hover{
+    border-color: rgb(255, 0, 221);
+}

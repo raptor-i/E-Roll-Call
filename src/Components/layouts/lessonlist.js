@@ -36,7 +36,7 @@ const LessonList = (props) =>
         
         <div>
             <button className="edit-student" onClick={Edit_Lesson}>
-        <span class="material-symbols-outlined">edit_note</span>
+        <span id="edit-lesson" class="material-symbols-outlined">edit_note</span>
       </button>
             <h1 className="Detailed-Lesson">Lesson Information</h1>
             <div className="list-group-lesson">
