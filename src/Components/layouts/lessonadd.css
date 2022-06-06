@@ -1,21 +1,21 @@
-
-.backgorund-add-student
+.Background-Lesson-Add
 {
-    
     height: 700px;
     width: 1000px;
-    background-color: rgb(72, 0, 241);
+    background-color: rgb(0, 76, 255);
     border: 3px solid;
     border-color: rgb(255, 0, 179);
     border-radius: 2%;
 }:hover{
     border-color: rgb(255, 0, 221);
 }
-.student-add-header
+
+.lesson-add-header
 {
     text-align: center;
 }
-.student-add-no
+
+.lesson-add-code
 {
     position: relative;
     margin: 20px;
@@ -24,7 +24,7 @@
     width: 300px;
 }
 
-.student-add-Name
+.lesson-add-Name
 {
     position: relative;
     right: 21.3rem;
@@ -35,7 +35,7 @@
     width: 300px;
 }
 
-.student-add-Sur
+.lesson-add-teacher
 {
     position: relative;
     top: 5rem;
@@ -45,7 +45,7 @@
     width: 300px;
 }
 
-.student-add-BD
+.lesson-add-Credit
 {
     position: relative;
     top: 10rem;
@@ -56,49 +56,26 @@
     width: 300px;
 }
 
-.student-add-photo
-{
-    position: relative;
-    top: 10rem;
-    margin: 20px;
-    height: 40px;
-    font-size: 35px;
-    width: 300px;
-}
-
-.student-add-save
+.lesson-add-save
 {
     border-radius: 10px;
     position: relative;
-    left: 30rem;
-    top: 15rem;
+    left: 10rem;
+    top: 20rem;
     text-align: center;
     width: 100px;
     font-size: 25px;
     background-color: rgb(179, 255, 179);
 }
 
-.student-add-cancel
+.lesson-add-cancel
 {
     border-radius: 10px;
     position: relative;
-    left: 40rem;
-    bottom: 1.5rem;
+    right: 6rem;
+    top: 20rem;
     text-align: center;
     width: 100px;
     font-size: 25px;
     background-color: rgb(255, 192, 192);
-}
-
-.student-add-preview
-{
-    position: relative;
-    bottom: 10rem;
-    left: 33rem;
-}
-
-.student-add-prep
-{
-    height: 200px;
-    width: 150px;
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import "./studentadd.css";
 
 const StudentAdd = (props) => {
@@ -22,9 +21,9 @@ const StudentAdd = (props) => {
                 Img : pp
             };
 
-            console.log(no + " " + name + " " + surname + " " + Bd + " " + pp + "  ");
-
-            props.SetNewStudent(newData);
+            console.log(newData.No + " " + newData.Name + " " + newData.Surname);
+            
+            props.data.push(newData);
             props.setadd_student(null)
             return;
         }
@@ -32,14 +31,15 @@ const StudentAdd = (props) => {
     }
   return (
     <div className="backgorund-add-student">
-      <h1>Student Add</h1>
-      <input type="text" placeholder="No" onChange={(e) => setno(e.target.value)}></input>
-      <input type="text" placeholder="Name" onChange={(e) => setname(e.target.value)} ></input>
-      <input type="text" placeholder="Surname" onChange={(e) => setsurname(e.target.value)} ></input>
-      <input type="date" placeholder="Birth date" min="2004-01-01" onChange={(e) => setbd(e.target.value)}></input>
-      <input type="text" placeholder="Photo (link)" onChange={(e) => setpp(e.target.value)}></input>
-      <button onClick={Save}>Save</button>
-      <button onClick={() => props.setadd_student(null)}>Cancel</button>
+      <h1 className="student-add-header">Student Add</h1>
+      <input type="text" className="student-add-no" placeholder="No" onChange={(e) => setno(e.target.value)}></input>
+      <input type="text" className="student-add-Name" placeholder="Name" onChange={(e) => setname(e.target.value)} ></input>
+      <input type="text" className="student-add-Sur" placeholder="Surname" onChange={(e) => setsurname(e.target.value)} ></input>
+      <input type="date" className="student-add-BD" placeholder="Birth date" min="2004-01-01" onChange={(e) => setbd(e.target.value)}></input>
+      <input type="text" className="student-add-photo" placeholder="Photo (link)" onChange={(e) => setpp(e.target.value)}></input>
+      <button className="student-add-save" onClick={Save}>Save</button>
+      <h4 className="student-add-preview">Image preview<img className="student-add-prep" src={pp}></img></h4>
+      <button className="student-add-cancel" onClick={() => props.setadd_student(null)}>Cancel</button>
     </div>
   );
 };

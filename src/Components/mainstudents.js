@@ -7,18 +7,13 @@ import StudentAdd from "./layouts/studentadd";
 
 let StudentData = Students();
 
+console.log("helloOOOOOOOOO");
 const MainStudents = () => {
   const [data, setData] = useState(StudentData);
   const [add_student, setadd_student] = useState(null);
-  const [newStudent, SetNewStudent] = useState("");
 
   const Add_Student = () => {
-    console.log("Student Added");
-
-    setadd_student(<StudentAdd setadd_student={setadd_student} SetNewStudent={SetNewStudent}></StudentAdd>);
-    console.log(newStudent);
-    setData = {...data, newStudent};
-    console.log(data);
+    setadd_student(<StudentAdd setadd_student={setadd_student} data={data}></StudentAdd>);
   };
 
 

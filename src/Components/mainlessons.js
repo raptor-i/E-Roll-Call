@@ -3,17 +3,17 @@ import LessonList from "./layouts/lessonlist";
 import Lesson from "../data/lessons";
 import "./mainlessons.css";
 import Icons from "../style/icons";
+import LessonAdd from "./layouts/lessonadd";
 
 let Data = Lesson();
 const MainLessons = () => {
   const [data, setData] = useState(Data);
-  
+  const [lessonadd, setlessonadd] = useState(null);
 
 
   const Add_Lesson = () => {
-
-    
-      
+    console.log("ADD lesssonn")
+    setlessonadd(<LessonAdd setlessonadd={setlessonadd} Data={Data}></LessonAdd>)
   };
 
   const Searching = (e) => {
@@ -29,8 +29,8 @@ const MainLessons = () => {
 
   return (
     <div className="MainLesson">
-      
-      <Icons />
+      <Icons /> 
+      {lessonadd}
       <div className="BackgroundLesson">
         <input
           className="Search-Box-Lesson"
