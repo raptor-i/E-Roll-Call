@@ -7,7 +7,7 @@ import StudentAdd from "./layouts/studentadd";
 
 let StudentData = Students();
 
-console.log("helloOOOOOOOOO");
+
 const MainStudents = () => {
   const [data, setData] = useState(StudentData);
   const [add_student, setadd_student] = useState(null);
@@ -45,7 +45,7 @@ const MainStudents = () => {
         </button>
         <h6 className="CurrentlyStudentHeader">Currently Enrolled Students</h6>
         <div className="Student-List">
-          <StudentList setData={setData} items={data}></StudentList>
+          <StudentList setData={setData} items={data.sort((a,b) => a.No - b.No)}></StudentList>
         </div>
       </div>
     </div>

@@ -1,23 +1,28 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./lessonlist.css"
+import Lesson from "../../data/lessons"
+import LessonEdit from "./lessonedit";
 
+let Data = Lesson();
 
 const LessonList = (props) =>
 {
+    const[slctdLesson, setslctdLesson] = useState("");
+    const[lesedit, setlesedit] = useState(null);
+
     let info = <p className="info-click">Click to a lesson to see more information.</p>;
     
     const Edit_Lesson = () =>
     {
-        //
+        setlesedit(<LessonEdit Data={Data} slctdLesson={slctdLesson} setlesedit={setlesedit}></LessonEdit>);
     };
 
     const ShowInfo = (e) =>
     {
-        console.log(e.target.id);
         
         let SelectedLesson = props.items.filter(x => x.Code == e.target.id);
-
+        setslctdLesson(SelectedLesson);
         setDetail(
             <div className="Detailed-Lesson">
                 <div className="Alt-info">
@@ -33,8 +38,8 @@ const LessonList = (props) =>
 
     const [detail, setDetail] = useState(info);
     return (
-        
         <div>
+            {lesedit}
             <button className="edit-student" onClick={Edit_Lesson}>
         <span id="edit-lesson" class="material-symbols-outlined">edit_note</span>
       </button>

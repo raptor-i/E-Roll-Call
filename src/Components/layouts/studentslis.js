@@ -2,18 +2,27 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./studentlist.css";
 import Icons from "../../style/icons";
+import StudentEdit from "./studentedit";
+import Students from "../../data/students";
 
+let StudentData = Students();
 const StudentList = (props) => {
   const [slctStudent, SetslctStudent] = useState();
-
+  const [editS, seteditS] = useState(null);
+  
   let info = (
     <p className="info-click">Click to a student to see more information.</p>
   );
-
+  
   const Edit_Student = () =>
   {
-    console.log(slctStudent);
-    
+    console.log("Editing")
+    if(slctStudent)
+    {
+      seteditS(<StudentEdit slctStudent={slctStudent} seteditS={seteditS} StudentData={StudentData.sort((a,b) => a.No - b.No)}></StudentEdit>)
+      return;
+    }
+    alert("Select a student!");
   };
 
 
@@ -40,6 +49,7 @@ const StudentList = (props) => {
   const [Detail, setDetail] = useState(info);
   return (
     <div>
+      {editS}
       <Icons />
       <button className="edit-student" onClick={Edit_Student}>
         <span id="edit-student" class="material-symbols-outlined">edit_note</span>

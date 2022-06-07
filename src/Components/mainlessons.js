@@ -43,7 +43,7 @@ const MainLessons = () => {
         </button>
         <h6 className="Active-Lessons">Active Lessons</h6>
         <div className="Lessons-List">
-          <LessonList items={data}></LessonList>
+          <LessonList items={data.sort()}></LessonList>
         </div>
       </div>
     </div>
