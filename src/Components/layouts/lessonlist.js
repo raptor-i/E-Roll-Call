@@ -15,7 +15,12 @@ const LessonList = (props) =>
     
     const Edit_Lesson = () =>
     {
-        setlesedit(<LessonEdit Data={Data} slctdLesson={slctdLesson} setlesedit={setlesedit}></LessonEdit>);
+        if(slctdLesson)
+        {
+            setlesedit(<LessonEdit Data={Data} slctdLesson={slctdLesson} setlesedit={setlesedit}></LessonEdit>);
+            return;
+        }
+            alert("Select a lesson!");
     };
 
     const ShowInfo = (e) =>

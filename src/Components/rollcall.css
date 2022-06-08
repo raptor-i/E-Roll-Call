@@ -8,6 +8,7 @@
     
 }
 
+
 .BackgroundRollcall
 {
     height: 600px;
@@ -21,3 +22,34 @@
     border-color: rgb(255, 0, 221);
 }
 
+.roll-call-lesson-select
+{
+    position: relative;
+    margin: 5px;
+    height: 35px;
+    border-radius: 10px;
+    bottom: 2.5rem;
+    background-color: rgb(193, 203, 248);
+}
+
+.roll-call-time
+{
+    position: relative;
+    text-align: right;
+    bottom : 2.5rem;
+    margin: 5px;
+}
+.roll-call-here
+{
+    position: relative;
+    text-align: right;
+    bottom : 4rem;
+    margin: 5px;
+}
+
+.roll-calal-students
+{
+    position: relative;
+    bottom : 4rem;
+    margin: 5px;
+}

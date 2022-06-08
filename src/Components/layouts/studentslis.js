@@ -19,7 +19,7 @@ const StudentList = (props) => {
     console.log("Editing")
     if(slctStudent)
     {
-      seteditS(<StudentEdit slctStudent={slctStudent} seteditS={seteditS} StudentData={StudentData.sort((a,b) => a.No - b.No)}></StudentEdit>)
+      seteditS(<StudentEdit slctStudent={slctStudent} SetslctStudent={SetslctStudent} seteditS={seteditS} StudentData={StudentData.sort((a,b) => a.No - b.No)}></StudentEdit>)
       return;
     }
     alert("Select a student!");

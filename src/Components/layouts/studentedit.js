@@ -34,6 +34,14 @@ const StudentEdit = (props) =>
       alert("Fill the all informs"); 
     }
     
+    const Delete = () =>
+    {
+        let index = props.StudentData.indexOf(props.slctStudent[0]);
+        props.StudentData.splice(index, 1);
+        props.seteditS(null);
+        props.SetslctStudent(null);
+        return;
+    }
     return (
     <div className="backgorund-edit-student">
       <h1 className="student-add-header">Student Edit or Delete</h1>
@@ -43,6 +51,7 @@ const StudentEdit = (props) =>
       <input type="date" className="student-add-BD" defaultValue={props.slctStudent[0].BirthDate} placeholder="Birth date" min="2004-01-01" onChange={(e) => setbd(e.target.value)}></input>
       <input type="text" className="student-add-photo" defaultValue={props.slctStudent[0].Img} placeholder="Photo (link)" onChange={(e) => setpp(e.target.value)}></input>
       <button className="student-add-save" onClick={Save}>Save</button>
+      <button className="student-edit-delete" onClick={Delete}>Delete</button>
       <h4 className="student-add-preview">Image preview<img className="student-add-prep" src={props.slctStudent[0].Img}></img></h4>
       <button className="student-add-cancel" onClick={() => props.seteditS(null)}>Cancel</button>
     </div>

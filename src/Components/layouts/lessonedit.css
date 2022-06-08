@@ -12,3 +12,45 @@
 }:hover{
     border-color: rgb(255, 0, 221);
 }
+
+.lesson-edit-delete
+{
+    border-radius: 10px;
+    position: relative;
+    right: 15em;
+    top: 20.1rem;
+    text-align: center;
+    width: 100px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.lesson-edit-delete:hover
+{
+    background-color: red;
+    color: white;
+}
+
+.student-edit-save
+{
+    border-radius: 10px;
+    position: relative;
+    left: 5.3rem;
+    top: 20rem;
+    text-align: center;
+    width: 100px;
+    font-size: 20px;
+    background-color: rgb(179, 255, 179);
+}
+
+
+.student-edit-cancel
+{
+    border-radius: 10px;
+    position: relative;
+    right: 9rem;
+    top: 20rem;
+    text-align: center;
+    width: 100px;
+    font-size: 20px;
+    background-color: rgb(255, 192, 192);
+}

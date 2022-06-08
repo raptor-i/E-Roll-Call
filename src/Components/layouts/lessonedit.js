@@ -22,7 +22,7 @@ const LessonEdit = (props) =>
                 Credit : credit
             };
 
-            console.log(props.Data);
+
             let index = props.Data.indexOf(props.slctdLesson[0]);
             props.Data.splice(index, 1);
             props.Data.push(newData);
@@ -33,6 +33,15 @@ const LessonEdit = (props) =>
       alert("Fill the all informs"); 
     }
     
+    const Delete = () =>
+    {
+        let index = props.Data.indexOf(props.slctdLesson[0]);
+        props.Data.splice(index, 1);
+        props.setlesedit(null)
+        return;
+    }
+
+
     return (
         <div class="Background-Lesson-Add">
         <h1 className="lesson-add-header">Lesson Add</h1>
@@ -40,8 +49,9 @@ const LessonEdit = (props) =>
         <input type="text" className="lesson-add-Name" placeholder="Name" defaultValue={props.slctdLesson[0].Name} onChange={(e) => setname(e.target.value)} ></input>
         <input type="text" className="lesson-add-teacher" placeholder="Teacher" defaultValue={props.slctdLesson[0].Teacher} onChange={(e) => setTeacher(e.target.value)} ></input>
         <input type="number" className="lesson-add-Credit" placeholder="Credit"defaultValue={props.slctdLesson[0].Credit}  min="1" onChange={(e) => setcredit(e.target.value)}></input>
-        <button className="lesson-add-save" onClick={Save}>Save</button>
-        <button className="lesson-add-cancel" onClick={() => props.setlesedit(null)}>Cancel</button>
+        <button className="lesson-edit-delete" onClick={Delete}>Delete</button>
+        <button className="student-edit-save" onClick={Save}>Save</button>
+        <button className="student-edit-cancel" onClick={() => props.setlesedit(null)}>Cancel</button>
       </div>
   );
 }
