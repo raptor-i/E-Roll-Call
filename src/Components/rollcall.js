@@ -3,11 +3,12 @@ import "./rollcall.css";
 import Students from "../data/students";
 import Lessons from "../data/lessons";
 import RollCallDataShow from "./layouts/rollcalldatashow";
-import RollCallData from "../data/rollcalldata";
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
+import RCID from "../data/rcid";
 
-let RollCallsData = RollCallData();
+
+let test = RCID();
 let StudentData = Students();
 let LessonData = Lessons();
 
@@ -16,12 +17,12 @@ const RollCall = () => {
   const d = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
   const today = new Date();
 
-  let datas = [slesson, d];
+  let datas = [{Lesson : slesson}, 
+              {Date :d}];
   
   const Exporting = (csvData, fileName) => {
     const fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
     const fileExtension = '.xlsx';
-    console.log("Hello");
     const ws = XLSX.utils.json_to_sheet(csvData);
     const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
     const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
@@ -30,19 +31,55 @@ const RollCall = () => {
 }
 
 
+
+
   const SaveRollCall = () => {
-    if (slesson == null) {
-      alert("Select a lesson");
-      return;
-    }
-    RollCallsData.splice(RollCallsData.length/2, RollCallsData.length/2);
 
-    if (datas[2] == undefined)
-        datas.push(RollCallsData);
+  if (slesson == null) {
+        alert("Select a lesson");
+        return;
+      }
+    
+    
+    let tester = [];
 
+  StudentData.filter(x => !test.includes(x.No)).forEach(x=>
+      {
+        let RollCallArray = {
+          No: "",
+          Name: "",
+          Surname: "",
+          Here: "No"
+        };
+
+        RollCallArray.No = x.No;
+        RollCallArray.Name = x.Name;
+        RollCallArray.Surname = x.Surname;
+        RollCallArray.Here  = "No";
+        tester.push(RollCallArray);
+      });
+
+
+  StudentData.filter(x => test.includes(x.No)).forEach(x => 
+      {
+        let RollCallArray = {
+          No: "",
+          Name: "",
+          Surname: "",
+          Here: "No"
+        };
+        RollCallArray.No = x.No;
+        RollCallArray.Name = x.Name;
+        RollCallArray.Surname = x.Surname;
+        RollCallArray.Here  = "Yes";
+        tester.push(RollCallArray);
+      });
+
+
+    tester.map(x => datas.push(x));
     Exporting(datas, "RollCall");
-    //window.location.reload()
-    console.log(datas);
+    window.location.reload()
+   
   };
 
   return (
@@ -70,7 +107,6 @@ const RollCall = () => {
           {StudentData.map((x) => (
             <RollCallDataShow
               StudentData={x}
-              RollCallsData={RollCallsData}
             ></RollCallDataShow>
           ))}
         </div>

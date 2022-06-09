@@ -1,46 +1,28 @@
 import { useEffect, useState } from "react";
 import "./rollcalldatashow.css";
 import Students from "../../data/students"
-import RollCallData from "../../data/rollcalldata";
+import RCID from "../../data/rcid";
 
+let test = RCID();
 
-let StudentData = Students();
-let RollCallDataa = RollCallData();
+//let StudentData = Students();
 const RollCallDataShow = (props) => {
   const [CBvalue, setCBvalue] = useState(true);
 
-  RollCallDataa= [];
 
-  let RollCallArray = {
-    No: props.StudentData.No,
-    Name: props.StudentData.Name,
-    Surname: props.StudentData.Surname,
-    status: "No"
-  };
-
-  useEffect(() => {
-    props.RollCallsData.push(RollCallArray);
-  }, []);
-
-  
-  let index = RollCallDataa.indexOf(RollCallArray);
-  const Handler = () => {
+  const HandlerTest = () =>
+  {
     setCBvalue(!CBvalue);
-    if(index == -1)
+    if(test.includes(props.StudentData.No))
     {
-        RollCallArray.status ="Yes";
-        index = RollCallDataa.indexOf(RollCallArray); 
-    } 
-    if(CBvalue)
-    {
-        RollCallArray.status = "Yes";
-        RollCallDataa[index] = RollCallArray;
+      let index = test.indexOf(props.StudentData.No);
+      test.splice(index, 1);
+      return;
     }
-    else{ console.log("Noo");
-        RollCallArray.status = "No";
-        RollCallDataa[index] = RollCallArray;
-    }
-  };
+      
+      test.push(props.StudentData.No);
+  }
+
 
   return (
     <div className="roll-call-data-row">
@@ -55,7 +37,7 @@ const RollCallDataShow = (props) => {
         className="roll-call-checkbox"
         type="checkbox"
         value={CBvalue}
-        onChange={Handler}
+        onChange={HandlerTest}
       ></input>
     </div>
   );
