@@ -15,7 +15,10 @@
     width: 500px;
     background-color: rgba(0, 25, 247, 0.09);
     border-radius: 10%;
-	
+}
+.bg:hover
+{
+	background-color: rgba(0, 25, 247, 0.15);
 }
 .buttonLogin {
     position: relative;

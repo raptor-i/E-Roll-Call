@@ -1,25 +1,45 @@
 import { useEffect, useState } from "react";
 import "./rollcalldatashow.css";
+import Students from "../../data/students"
+import RollCallData from "../../data/rollcalldata";
 
 
+let StudentData = Students();
+let RollCallDataa = RollCallData();
 const RollCallDataShow = (props) => {
-  const [CBvalue, setCBvalue] = useState(false);
+  const [CBvalue, setCBvalue] = useState(true);
+
+  RollCallDataa= [];
 
   let RollCallArray = {
     No: props.StudentData.No,
     Name: props.StudentData.Name,
     Surname: props.StudentData.Surname,
-    status: CBvalue ? "Yes" : "No",
+    status: "No"
   };
 
-
-
-
-  const Handler = () => {
-    let index = props.RollCallsData.indexOf(RollCallArray);
-    setCBvalue(!CBvalue);
-    props.RollCallsData.splice(index, 1);
+  useEffect(() => {
     props.RollCallsData.push(RollCallArray);
+  }, []);
+
+  
+  let index = RollCallDataa.indexOf(RollCallArray);
+  const Handler = () => {
+    setCBvalue(!CBvalue);
+    if(index == -1)
+    {
+        RollCallArray.status ="Yes";
+        index = RollCallDataa.indexOf(RollCallArray); 
+    } 
+    if(CBvalue)
+    {
+        RollCallArray.status = "Yes";
+        RollCallDataa[index] = RollCallArray;
+    }
+    else{ console.log("Noo");
+        RollCallArray.status = "No";
+        RollCallDataa[index] = RollCallArray;
+    }
   };
 
   return (

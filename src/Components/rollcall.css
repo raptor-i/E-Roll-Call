@@ -53,3 +53,18 @@
     bottom : 4rem;
     margin: 5px;
 }
+.roll-call-export
+{
+    position: relative;
+    text-align:  center;
+    left: 55rem;
+    background-color: aquamarine;
+    font-size: 20px;
+    width: 80px;
+    top: 15rem;
+    border-radius: 10px;
+}
+.roll-call-export:hover
+{
+    cursor: pointer;
+}
