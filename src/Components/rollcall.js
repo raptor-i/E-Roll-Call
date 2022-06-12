@@ -110,7 +110,7 @@ const RollCall = () => {
             ></RollCallDataShow>
           ))}
         </div>
-        <button className="roll-call-export" onClick={SaveRollCall}>Save</button>
+        <button className="roll-call-export" onClick={SaveRollCall}>Export</button>
       </div>
     </div>
   );
